@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopTunUnghia</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #bff0f6 0%, #4ecca3 100%);;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            min-height: 10vh; /* Đảm bảo đủ chiều cao */
+            margin: 0; /* Loại bỏ margin mặc định */
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        h3 {
+            color: #4ecca3;
+            font-weight: 480;
+            margin-bottom: 1px;
+            text-shadow: 0.1px 0.1px 0.1px rgba(0,0,0,0.01);
+            line-height: 0.01;
+            font-size: 12px;
+            text-align: left;
+        }
+        h4 {
+            color: #4ceca3;
+            font-weight: 500;
+            margin-bottom: 1px;
+            text-shadow: 0.1px 0.1px 0.1px rgba(0,0,0,0.01);
+            line-height: 0.01;
+            font-size: 18px;
+            text-align: left;
+        }
+        .box {
+            background: linear-gradient(135deg, #b20000 0%, #4ecca3 100%);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 500px;
+            margin: 10px 0;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.2s ease;
+        }
+        .box-gop {
+            background: linear-gradient(135deg, #22ffb7 0%, #4ecca3 100%);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 500px;
+            margin: 10px 0;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.2s ease;
+        }
+        .box:hover {
+            transform: scale(1.02);
+        }
+        .box h2 {
+            color: #4ecca3;
+            margin-bottom: 12px;
+        }
+        /* Cập nhật CSS cho các nút có ảnh và chữ */
+        .box .button-with-icon {
+            display: inline-flex; /* Quan trọng để ảnh và chữ cùng hàng */
+            align-items: center; /* Canh giữa theo chiều dọc */
+            justify-content: center; /* Canh giữa nội dung */
+            margin-top: 10px;
+            padding: 10px 18px;
+            background: #4ecca3; /* Màu nền nút */
+            color: white; /* Màu chữ */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none; /* Loại bỏ gạch chân mặc định của link */
+            transition: background 0.3s ease;
+        }
+        .box .button-with-icon:hover {
+            background: #3bb495; /* Màu nền khi hover */
+        }
+        .box .button-with-icon img {
+            width: 20px; /* Kích thước icon */
+            height: 20px;
+            margin-right: 8px; /* Khoảng cách giữa icon và chữ */
+            vertical-align: middle; /* Đảm bảo căn chỉnh tốt */
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #0078ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .top-left-info {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 12px 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            font-size: 7px;
+            line-height: 1.6;
+            z-index: 9999;
+        }
+        .top-left-info a {
+            color: #0078ff;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+        .box h2 img {
+            width: 200px;  /* Đặt chiều rộng cố định */
+            height: 200px; /* Đặt chiều cao cố định */
+            object-fit: cover; /* Quan trọng: Ảnh sẽ lấp đầy không gian, có thể bị cắt một phần */
+            vertical-align: left;
+            border-radius: 20px;
+        }
+        .box-gop h2 img {
+            width: 320px;  /* Đặt chiều rộng cố định */
+            height: 230px; /* Đặt chiều cao cố định */
+            object-fit: cover; /* Quan trọng: Ảnh sẽ lấp đầy không gian, có thể bị cắt một phần */
+            vertical-align: left;
+            border-radius: 20px;
+        }
+        .img {
+            width: 400px;
+            hight: 200px;
+            object-fit: cover;
+            vertical-align: middle;
+            border-radius: 15px;
+        }
+        .fixed-button {
+            background-color: transparent;
+            border-radius: 15px;
+            border: none;
+            position: fixed;
+            bottom: 20px;
+            right: 1px;
+            z-index: 1000;
+        }
+        .di-theo {
+            border-radius: 15px;
+            border: none;
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .di-theo h3 {
+            color: #000000;
+            font-weight: 480;
+            margin-bottom: 1px;
+            text-shadow: 0.1px 0.1px 0.1px rgba(0,0,0,0.01);
+            line-height: 0.01;
+            font-size: 12px;
+        }
+        .fixed-button img {
+            width: 70px; /* Kích thước chiều rộng của icon */
+            height: 70px; /* Kích thước chiều cao của icon */
+            margin-right: 8px; /* Khoảng cách giữa icon và chữ */
+        }
+      </style>
+</head>
+<div class="top-left-info">
+    <strong>Admin:</strong> Uông Nghĩa<br>
+    <a href="https://www.tiktok.com/@unghia._" target="_blank">Kênh TikTok</a>
+    <a href="https://www.youtube.com/@Uong-Nghia" target="_blank">Kênh YouTube</a>
+    <a href="https://www.facebook.com/ungnghiaA" target="_blank">Facebook Admin Unghia</a>
+</div>
+<h1><img src="Shop.png" alt=" " class="img"></h1>
+<div class="box-gop">
+    <h2><img src="Reg-Fb.png" alt="Reg acc facebook"></h2>
+    <div class="box">
+        <h2>Reg acc facebook có key</h2>
+        <h3>30.000đ</h3>
+        <h3>Đã bán: 1</h3>
+        <a onclick="handleButtonClick('Reg acc facebook có key', 'https://www.facebook.com/ungnghiaA')" class="button-with-icon"> Mua ngay
+        </a>
+    </div>
+    <div class="box">
+        <h2>Reg acc facebook ko key</h2>
+        <h3>50.000đ</h3>
+        <h3>Đã bán: 1</h3>
+        <a onclick="handleButtonClick('Reg acc facebook ko key', 'https://www.facebook.com/ungnghiaA')" class="button-with-icon"> Mua ngay
+        </a>
+    </div>
+</div>
+<div class="box-gop">
+    <h2>Tool Novelah</h2>
+    <div class="box">
+        <h2><img src="novelahV1.png" alt="NovelahV1"></h2>
+        <h3>20.000đ</h3>
+        <h3>Đã bán: 13</h3>
+        <a onclick="handleButtonClick('NovelahV1', 'https://www.facebook.com/ungnghiaA')" class="button-with-icon"> Mua ngay
+        </a>
+    </div>
+    <div class="box">
+        <h2><img src="novelahV2.5.png" alt="NovelahV2.5"></h2>
+        <h3>50.000đ</h3>
+        <h3>Đã bán: 6</h3>
+        <a onclick="handleButtonClick('NovelahV2.5','https://www.facebook.com/ungnghiaA')" class="button-with-icon"> Mua ngay
+        </a>
+    </div>
+    <div class="box">
+        <h2><img src="NovelahV5.png" alt="NovelahV5"></h2>
+        <h3>100.000đ</h3>
+        <h3>Đã bán: 0</h3>
+        <a onclick="handleButton('NovelahV5','https://www.facebook.com/ungnghiaA')" class="button-with-icon" > Mua ngay
+        </a>
+    </div>
+</div>
+<div class="box-gop">
+    <h2><img src="tuongtaccheo.png" alt="tuongtaccheo"></h2>
+    <div class="box">
+        <h2>tuongtaccheo có key</h2>
+        <h3>70.000đ</h3>
+        <h3>Đã bán: 0</h3>
+        <a onclick="handleButtonClick('Tuongtaccheo facebook có key','https://www.facebook.com/ungnghiaA')" class="button-with-icon" > Mua ngay
+        </a>    
+    </div>
+    <div class="box">
+        <h2>tuongtaccheo ko key</h2>
+        <h3>120.000đ</h3>
+        <h3>Đã bán: 0</h3>
+        <a onclick="handleButtonClick('Tuongtaccheo facebook ko key','https://www.facebook.com/ungnghiaA')" class="button-with-icon" > Mua ngay
+        </a>
+    </div>
+</div>
+<script>
+    function handleButtonClick(itemName, url, con) {
+        const messageToCopy = `Mua ${itemName}`;
+        navigator.clipboard.writeText(messageToCopy.trim()).then(function () {
+            alert(`✔️Đã Copy Tin Nhắn. Hãy nhắn: Mua ${itemName}. Vui lòng bấm 2 lần`);
+            window.open(url, '_blank');
+        }, function (err) {
+            alert("❌ Lỗi copy: " + err + `. Hãy nhắn: Mua ${itemName}`);
+            window.open(url, '_blank');
+        });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('toggleButton');
+        const topLeftInfo = document.getElementById('topLeftInfo');
+
+        // Ẩn thông tin ban đầu
+        topLeftInfo.style.display = 'none';
+
+        toggleButton.addEventListener('click', function() {
+            if (topLeftInfo.style.display === 'none' || topLeftInfo.style.display === '') {
+                topLeftInfo.style.display = 'block'; // Hoặc 'flex' tùy thuộc vào cách bạn muốn hiển thị
+            } else {
+                topLeftInfo.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+<div class="footer">
+    <p>Admin: <b>Uông Nghĩa</b></p>
+    <p>TikTok: <a href="https://www.tiktok.com/@unghia._" target="_blank">https://www.tiktok.com/@unghia._</a></p>
+</div>
+</body>
+</html>
