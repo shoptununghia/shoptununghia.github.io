@@ -191,14 +191,14 @@
         <h2>Reg acc facebook có key</h2>
         <h3>30.000đ</h3>
         <h3>Đã bán: 1</h3>
-        <a onclick="handleButtonClick('Reg acc facebook có key', 'https://www.facebook.com/ungnghiaA')" class="button-with-icon"> Mua ngay
+        <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon"> Mua ngay
         </a>
     </div>
     <div class="box">
         <h2>Reg acc facebook ko key</h2>
         <h3>50.000đ</h3>
         <h3>Đã bán: 1</h3>
-        <a onclick="handleButtonClick('Reg acc facebook ko key', 'https://www.facebook.com/ungnghiaA')" class="button-with-icon"> Mua ngay
+        <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon"> Mua ngay
         </a>
     </div>
 </div>
@@ -208,21 +208,21 @@
         <h2><img src="novelahV1.png" alt="NovelahV1"></h2>
         <h3>20.000đ</h3>
         <h3>Đã bán: 13</h3>
-        <a onclick="handleButtonClick('NovelahV1', 'https://www.facebook.com/ungnghiaA')" class="button-with-icon"> Mua ngay
+        <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon"> Mua ngay
         </a>
     </div>
     <div class="box">
         <h2><img src="novelahV2.5.png" alt="NovelahV2.5"></h2>
         <h3>50.000đ</h3>
         <h3>Đã bán: 6</h3>
-        <a onclick="handleButtonClick('NovelahV2.5','https://www.facebook.com/ungnghiaA')" class="button-with-icon"> Mua ngay
+        <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon"> Mua ngay
         </a>
     </div>
     <div class="box">
         <h2><img src="NovelahV5.png" alt="NovelahV5"></h2>
         <h3>100.000đ</h3>
         <h3>Đã bán: 0</h3>
-        <a onclick="handleButton('NovelahV5','https://www.facebook.com/ungnghiaA')" class="button-with-icon" > Mua ngay
+        <a onclick="handleButton('https://www.tiktok.com/@unghia._')" class="button-with-icon" > Mua ngay
         </a>
     </div>
 </div>
@@ -232,28 +232,23 @@
         <h2>tuongtaccheo có key</h2>
         <h3>70.000đ</h3>
         <h3>Đã bán: 0</h3>
-        <a onclick="handleButtonClick('Tuongtaccheo facebook có key','https://www.facebook.com/ungnghiaA')" class="button-with-icon" > Mua ngay
+        <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon" > Mua ngay
         </a>    
     </div>
     <div class="box">
         <h2>tuongtaccheo ko key</h2>
         <h3>120.000đ</h3>
         <h3>Đã bán: 0</h3>
-        <a onclick="handleButtonClick('Tuongtaccheo facebook ko key','https://www.facebook.com/ungnghiaA')" class="button-with-icon" > Mua ngay
+        <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon" > Mua ngay
         </a>
     </div>
 </div>
 <script>
-    function handleButtonClick(itemName, url, con) {
-        const messageToCopy = `Mua ${itemName}`;
-        navigator.clipboard.writeText(messageToCopy.trim()).then(function () {
-            alert(`✔️Đã Copy Tin Nhắn. Hãy nhắn: Mua ${itemName}. Vui lòng bấm 2 lần`);
-            window.open(url, '_blank');
-        }, function (err) {
-            alert("❌ Lỗi copy: " + err + `. Hãy nhắn: Mua ${itemName}`);
-            window.open(url, '_blank');
-        });
+    function handleButtonClick(url) {
+    alert(`Vui lòng nhắn tin`);
+    window.open(url, '_blank');
     }
+
     document.addEventListener('DOMContentLoaded', function() {
         const toggleButton = document.getElementById('toggleButton');
         const topLeftInfo = document.getElementById('topLeftInfo');
