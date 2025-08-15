@@ -62,12 +62,29 @@
             backdrop-filter: blur(5px);
             transition: transform 0.2s ease;
         }
+        .box-rieng {
+            background: linear-gradient(135deg, #22ffb7 0%, #4ecca3 100%);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 500px;
+            margin: 10px 0;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.2s ease;
+        }
         .box:hover {
             transform: scale(1.02);
         }
         .box h2 {
             color: #4ecca3;
             margin-bottom: 12px;
+        }
+        .box h5 {
+            color: #000000;
+            margin-bottom: 12px;
+            font-size: 25px;
         }
         /* Cập nhật CSS cho các nút có ảnh và chữ */
         .box .button-with-icon {
@@ -89,6 +106,31 @@
             background: #3bb495; /* Màu nền khi hover */
         }
         .box .button-with-icon img {
+            width: 20px; /* Kích thước icon */
+            height: 20px;
+            margin-right: 8px; /* Khoảng cách giữa icon và chữ */
+            vertical-align: middle; /* Đảm bảo căn chỉnh tốt */
+        }
+        /* Cập nhật CSS cho các nút có ảnh và chữ */
+        .box-gop .button-with-icon {
+            display: inline-flex; /* Quan trọng để ảnh và chữ cùng hàng */
+            align-items: center; /* Canh giữa theo chiều dọc */
+            justify-content: center; /* Canh giữa nội dung */
+            margin-top: 10px;
+            padding: 10px 18px;
+            background: #4ecca3; /* Màu nền nút */
+            color: white; /* Màu chữ */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none; /* Loại bỏ gạch chân mặc định của link */
+            transition: background 0.3s ease;
+        }
+        .box-gop .button-with-icon:hover {
+            background: #3bb495; /* Màu nền khi hover */
+        }
+        .box-gop .button-with-icon img {
             width: 20px; /* Kích thước icon */
             height: 20px;
             margin-right: 8px; /* Khoảng cách giữa icon và chữ */
@@ -186,19 +228,18 @@
 </div>
 <h1><img src="Shop.png" alt=" " class="img"></h1>
 <div class="box-gop">
+    <h2>Tool Reg Acc Facebook</h2>
     <h2><img src="Reg-fb.png" alt="Reg acc facebook"></h2>
     <div class="box">
-        <h2>Reg acc facebook có key</h2>
+        <h2>Có key</h2>
         <h3>30.000đ</h3>
-        <h3>Đã bán: 1</h3>
-        <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon"> Mua ngay
+        <a onclick="handleButtonClick('https://www.tiktok.me/unghia._')" class="button-with-icon"> Mua ngay
         </a>
     </div>
     <div class="box">
-        <h2>Reg acc facebook ko key</h2>
+        <h2>Không key</h2>
         <h3>50.000đ</h3>
-        <h3>Đã bán: 1</h3>
-        <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon"> Mua ngay
+        <a onclick="handleButtonClick('https://www.tiktok.me/unghia._')" class="button-with-icon"> Mua ngay
         </a>
     </div>
 </div>
@@ -207,32 +248,30 @@
     <div class="box">
         <h2><img src="novelahV1.png" alt="NovelahV1"></h2>
         <h3>20.000đ</h3>
-        <h3>Đã bán: 13</h3>
-        <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon"> Mua ngay
+        <a onclick="handleButtonClick('https://www.tiktok.me/unghia._')" class="button-with-icon"> Mua ngay
         </a>
     </div>
     <div class="box">
         <h2><img src="novelahV2.5.png" alt="NovelahV2.5"></h2>
         <h3>50.000đ</h3>
-        <h3>Đã bán: 6</h3>
-        <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon"> Mua ngay
+        <a onclick="handleButtonClick('https://www.tiktok.me/unghia._')" class="button-with-icon"> Mua ngay
         </a>
     </div>
     <div class="box">
         <h2><img src="NovelahV5.png" alt="NovelahV5"></h2>
         <h3>100.000đ</h3>
-        <h3>Đã bán: 0</h3>
-        <a onclick="handleButton('https://www.tiktok.com/@unghia._')" class="button-with-icon" > Mua ngay
+        <a onclick="handleButton('https://www.tiktok.me/unghia._')" class="button-with-icon" > Mua ngay
         </a>
     </div>
 </div>
 <div class="box-gop">
-    <h2><img src="tuongtaccheo.png" alt="tuongtaccheo"></h2>
-    <h2>tuongtaccheo</h2>
-    <h3>70.000đ</h3>
-    <h3>Đã bán: 2</h3>
-    <a onclick="handleButtonClick('https://www.tiktok.com/@unghia._')" class="button-with-icon" > Mua ngay
-    </a>
+    <h2>Tool tuongtaccheo</h2>
+    <div class="box">
+        <h2><img src="tuongtaccheo.png" alt="tuongtaccheo"></h2>
+        <h3>70.000đ</h3>
+        <a onclick="handleButtonClick('https://www.tiktok.me/unghia._')" class="button-with-icon" > Mua ngay
+        </a>
+    </div>
 </div>
 <script>
     function handleButtonClick(url) {
